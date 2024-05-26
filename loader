@@ -1,0 +1,1515 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({IntroText = "BiU GUI",Name = "BiU GUI V3", HidePremium = false, SaveConfig = true, IntroEnabled = true, ConfigFolder = "BiUGUIConfig"})
+
+---SafeSpot---
+
+local SafeSpot = Instance.new("Part", workspace)
+
+SafeSpot.Position = Vector3.new(-2000,100,-1500)
+
+SafeSpot.Name = "Spot"
+
+SafeSpot.Size = Vector3.new(800,60,800)
+
+SafeSpot.Anchored = true
+
+SafeSpot.Transparency = .8
+
+---SafeSpot---
+
+local SafeSpot = Instance.new("Part", workspace)
+
+SafeSpot.Position = Vector3.new(-2305.51,-30000,24.27)
+
+SafeSpot.Name = "Spot"
+
+SafeSpot.Size = Vector3.new(800,60,800)
+
+SafeSpot.Anchored = true
+
+SafeSpot.Transparency = .8
+
+---anti voin---
+
+local jesus = Instance.new("Part", workspace)
+
+jesus.Name = "jesusWalk"
+jesus.Size = Vector3.new(2047, 0.009, 2019)
+jesus.Position = Vector3.new(-80.5, -10.005, -246.5)
+jesus.CanCollide = false
+jesus.Anchored = true
+jesus.Transparency = 1
+
+local arenaVoid = Instance.new("Part", workspace)
+
+arenaVoid.Name = "arenaVoid"
+arenaVoid.Size = Vector3.new(798, 1, 1290)
+arenaVoid.Position = Vector3.new(3450, 59.009, 68)
+arenaVoid.CanCollide = false
+arenaVoid.Anchored = true
+arenaVoid.Transparency = 1
+
+---times fish---
+
+local Time = 0
+
+local Total = 3600
+
+---anti cheat bypass---
+
+local Namecall
+Namecall = hookmetamethod(game, '__namecall', function(self, ...)
+	   if getnamecallmethod() == 'FireServer' and tostring(self) == 'Ban' then
+		       return
+			   elseif getnamecallmethod() == 'FireServer' and tostring(self) == 'WalkSpeedChanged' then
+		       return
+			   elseif getnamecallmethod() == 'FireServer' and tostring(self) == 'AdminGUI' then
+		       return
+			   end
+	   return Namecall(self, ...)
+end)
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab1 = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab3 = Window:MakeTab({
+	Name = "Anti Void",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Tab4 = Window:MakeTab({
+	Name = "Get Elude",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab5 = Window:MakeTab({
+	Name = "Glove Equipping",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab6 = Window:MakeTab({
+	Name = "Farms",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab7 = Window:MakeTab({
+	Name = "Kill Aura (Kick!)",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab8 = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab9 = Window:MakeTab({
+	Name = "Ability Spawn",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab10 = Window:MakeTab({
+	Name = "Equip Badge Gloves",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab11 = Window:MakeTab({
+	Name = "Portal Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Main"
+})
+
+Tab:AddButton({
+	Name = "Keyboard",
+	Callback = function()
+		      loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+		  end    
+})
+
+Tab4:AddButton({
+	Name = "Tp end (you pass)",
+	Callback = function()
+		      local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
+
+		if teleportFunc then
+			    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        
+        local localPlr = game:GetService("Players").LocalPlayer
+        repeat wait() until localPlr
+        
+        game:GetService("RunService").RenderStepped:Connect(function()
+            localPlr.Character.HumanoidRootPart.CFrame = CFrame.new(-502.336, 14.228, -179.597)
+        end)
+    ]])
+		end
+
+		game:GetService("TeleportService"):Teleport(11828384869)
+		  end    
+})
+
+Tab4:AddButton({
+	Name = "Get Keypad Code [Doesn't Teleport]",
+	Callback = function()
+		      print(#game.Players:GetChildren() * 25 + 1100 - 7)
+		  end    
+})
+
+Tab2:AddButton({
+	Name = "SR",
+	Callback = function()
+		      loadstring(game:HttpGet(('https://pastebin.com/raw/Tx7XLqcm'),true))()
+		  end    
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+	end    
+})
+
+Tab6:AddButton({
+	Name = "Teleport To Safe Zone",
+	Callback = function()
+		         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Spot.CFrame * CFrame.new(-300,50,0)
+		  end    
+})
+
+Tab6:AddButton({
+	Name = "Teleport To Safe Zone 2 [In-Dev]",
+	Callback = function()
+		         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Spot.CFrame * CFrame.new(-300,-29950,1500)
+		  end    
+})
+
+Tab6:AddToggle({
+	Name = "Fish Timer",
+	Default = false,
+	Callback = function(Fish)
+		Timer = Fish
+
+		      if Fish == true then
+
+			          Count()
+
+
+			          end
+		          
+		          
+		          
+		          function Count()
+
+			while Timer do
+
+
+
+				task.wait(1)
+
+
+
+
+				if game.Players.LocalPlayer.leaderstats.Glove.Value == "ZZZZZZZ" and game.Players.LocalPlayer.Character.Ragdolled.Value then
+
+					Time = Time + 1
+
+
+					print(Time)
+
+
+				else
+
+					    Time = 0
+
+
+				end
+			end
+
+		end
+	end    
+})
+
+Tab6:AddToggle({
+	Name = "Slap Baller",
+	Default = false,
+	Callback = function(bool)
+		bully = bool
+		        
+		        if bool == true then
+			            
+			            BooleanTing()
+			            
+			            end
+		            
+		                      
+		   function BooleanTing()
+			        
+			              while bully do
+				        
+				        wait(.001)
+				    
+				    for _, v in ipairs(workspace:GetChildren()) do
+					    
+					    if string.sub(v.Name, 3, 8) == "Baller" then
+						game:GetService("ReplicatedStorage").GeneralHit:FireServer(v:WaitForChild("HumanoidRootPart"))
+					end
+				end
+			end
+			        
+			    end
+	end    
+})
+
+Tab3:AddButton({
+	Name = "Tournament Arena (Cannot Die)",
+	Callback = function()
+		      arenaVoid.CanCollide = true
+		arenaVoid.Anchored = true
+		arenaVoid.Transparency = 0.5
+		  end    
+})
+
+Tab3:AddButton({
+	Name = "Tournament Arena (Can Die)",
+	Callback = function()
+		      arenaVoid.CanCollide = false
+		arenaVoid.Anchored = true
+		arenaVoid.Transparency = 1
+		  end    
+})
+
+Tab3:AddButton({
+	Name = "Normal Arena Anti-Void",
+	Callback = function()
+		      jesus.CanCollide = true
+		jesus.Anchored = true
+		jesus.Transparency = 0.5
+		  end    
+})
+
+Tab3:AddButton({
+	Name = "Disable Normal Arena Anti-Void",
+	Callback = function()
+		      jesus.CanCollide = false
+		jesus.Anchored = true
+		jesus.Transparency = 1
+		  end    
+})
+
+Tab6:AddToggle({
+	Name = "BOB Farm",
+	Default = false,
+	Callback = function(Get_Bob)
+		GetBob = Get_Bob
+		         
+		        if Get_Bob == true then
+			            
+			            FarmBob()
+			            
+			            
+			            
+			            end
+		            
+		            
+
+		    function FarmBob()
+			        
+			        while GetBob do
+				            
+				            task.wait(.25)
+				            
+				             if not game.Players.LocalPlayer.Character:FindFirstChild("entered") and game.Players.LocalPlayer.leaderstats.Glove.Value == "Replica" then
+					            
+					            task.wait(.76)
+					            
+					            
+					            game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = workspace.Lobby.Teleport1.CFrame
+					            
+					            task.wait(.77)
+					            
+					game:GetService("ReplicatedStorage").Duplicate:FireServer()
+
+					task.wait(1.45)
+
+					if not workspace:FindFirstChild("bobcap") then
+						    
+						    local args = {
+							    [1] = game:GetService("Players").LocalPlayer.Character,
+							    [2] = false
+						}
+
+						game:GetService("ReplicatedStorage").HumanoidDied:FireServer(unpack(args))
+
+						    else
+						        
+						        print(Now printing "Bob")
+						    
+						    end
+
+
+					                
+					                
+					            end
+				        
+				        
+				        
+				    end
+			            
+			            
+			            
+			            end
+	end    
+})
+
+
+Tab2:AddButton({
+	Name = "Dizzy Hub",
+	Callback = function()
+		      loadstring(game:HttpGet("https://raw.githubusercontent.com/dizyhvh/slap_battles_gui/main/0.lua"))()
+		  end    
+})
+
+Tab2:AddButton({
+	Name = "Drippy Hub",
+	Callback = function()
+		      loadstring(game:HttpGet("https://raw.githubusercontent.com/ZombieGamesYT/DrippyHub-1.1/main/DrippyHub%201.2"))()
+		  end    
+})
+
+Tab2:AddButton({
+	Name = "Fly",
+	Callback = function()
+
+		loadstring(game:HttpGet("https://pastebin.com/raw/RBCKH7yb"))()
+		  end
+})
+
+Tab7:AddButton({
+	Name = "Killstreak Slap Aura",
+	Callback = function()
+		      function isSpawned(player)
+			   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+				       return true
+				   else
+				       return false
+				   end
+		end
+
+		while wait() do
+			   for i, v in pairs(game.Players:GetPlayers()) do
+				       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+					           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
+						               game:GetService("ReplicatedStorage").KSHit:FireServer(v.Character["Right Arm"])
+						               wait(.0001)
+						           end
+					       end
+				   end
+		end
+		  end    
+})
+
+Tab7:AddButton({
+	Name = "Reaper Slap Aura",
+	Callback = function()
+		      function isSpawned(player)
+			   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+				       return true
+				   else
+				       return false
+				   end
+		end
+
+		while wait() do
+			   for i, v in pairs(game.Players:GetPlayers()) do
+				       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+					           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
+						               game:GetService("ReplicatedStorage").ReaperHit:FireServer(v.Character["Right Arm"])
+						               wait(.0001)
+						           end
+					       end
+				   end
+		end
+		  end    
+})
+
+Tab7:AddButton({
+	Name = "Diamond Slap Aura",
+	Callback = function()
+		      function isSpawned(player)
+			   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+				       return true
+				   else
+				       return false
+				   end
+		end
+
+		while wait() do
+			   for i, v in pairs(game.Players:GetPlayers()) do
+				       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+					           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
+						               game:GetService("ReplicatedStorage").DiamondHit:FireServer(v.Character["Right Arm"])
+						               wait(.0001)
+						           end
+					       end
+				   end
+		end
+		  end    
+})
+
+Tab7:AddButton({
+	Name = "Default Slap Aura",
+	Callback = function()
+		      function isSpawned(player)
+			   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+				       return true
+				   else
+				       return false
+				   end
+		end
+
+		while wait() do
+			   for i, v in pairs(game.Players:GetPlayers()) do
+				       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+					           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
+						               game:GetService("ReplicatedStorage").b:FireServer(v.Character["Right Arm"])
+						               wait(.0001)
+						           end
+					       end
+				   end
+		end
+		  end    
+})
+
+Tab7:AddButton({
+	Name = "ZZZZ Slap Aura",
+	Callback = function()
+		      function isSpawned(player)
+			   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+				       return true
+				   else
+				       return false
+				   end
+		end
+
+		while wait() do
+			   for i, v in pairs(game.Players:GetPlayers()) do
+				       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+					           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
+						               game:GetService("ReplicatedStorage").ZZZZZZZHit:FireServer(v.Character["Right Arm"])
+						               wait(.0001)
+						           end
+					       end
+				   end
+		end
+		  end    
+})
+
+Tab7:AddButton({
+	Name = "Slap Aura (Brick)",
+	Callback = function()
+		      function isSpawned(player)
+			   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+				       return true
+				   else
+				       return false
+				   end
+		end
+
+		while wait() do
+			   for i, v in pairs(game.Players:GetPlayers()) do
+				       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+					           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
+						               game:GetService("ReplicatedStorage").BrickHit:FireServer(v.Character["Right Arm"])
+						               wait(.0001)
+						           end
+					       end
+				   end
+		end
+		  end    
+})
+
+Tab7:AddButton({
+	Name = "Slap Aura (Snow)",
+	Callback = function()
+		      function isSpawned(player)
+			   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+				       return true
+				   else
+				       return false
+				   end
+		end
+
+		while wait() do
+			   for i, v in pairs(game.Players:GetPlayers()) do
+				       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+					           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
+						               game:GetService("ReplicatedStorage").SnowHit:FireServer(v.Character["Right Arm"])
+						               wait(.0001)
+						           end
+					       end
+				   end
+		end
+		  end    
+})
+
+Tab7:AddButton({
+	Name = "Slap Aura (Pull)",
+	Callback = function()
+		      function isSpawned(player)
+			   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+				       return true
+				   else
+				       return false
+				   end
+		end
+
+		while wait() do
+			   for i, v in pairs(game.Players:GetPlayers()) do
+				       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+					           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
+						               game:GetService("ReplicatedStorage").PullHit:FireServer(v.Character["Right Arm"])
+						               wait(.0001)
+						           end
+					       end
+				   end
+		end
+		  end    
+})
+
+Tab7:AddButton({
+	Name = "Slap Aura (Speedrun)",
+	Callback = function()
+		      function isSpawned(player)
+			   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+				       return true
+				   else
+				       return false
+				   end
+		end
+
+		while wait() do
+			   for i, v in pairs(game.Players:GetPlayers()) do
+				       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+					           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
+						               game:GetService("ReplicatedStorage").Speedrunhit:FireServer(v.Character["Right Arm"])
+						               wait(.0001)
+						           end
+					       end
+				   end
+		end
+		  end    
+})
+
+Tab2:AddButton({
+	Name = "MoonUI v10",
+	Callback = function()
+		      loadstring(game:HttpGet('https://raw.githubusercontent.com/IlikeyocutgHAH12/MoonUI-v10-/main/MoonUI%20v10'))()
+		  end    
+})
+
+Tab2:AddButton({
+	Name = "Slap Royale (With auto farm)",
+	Callback = function()
+		      loadstring(game:HttpGet("loadstring(game:HttpGet('https://raw.githubusercontent.com/Voxul/VoxulHub/main/loader.lua'))()"))()
+		  end    
+})
+
+Tab2:AddButton({
+	Name = "Turies Spy",
+	Callback = function()
+		      loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Error (50K SLAPS REQUIRED!!)",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Error.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Default",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Default.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Diamond",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Diamond.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip ZZZZZZZ",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.ZZZZZZZ.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Extended",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Extended.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Brick",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Brick.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Snow",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Snow.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Pull",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Pull.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Flash",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Flash.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Spring",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Spring.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Swapper",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Swapper.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Bull",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Bull.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Dice",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Dice.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Ghost",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Ghost.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Thanos",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Thanos.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Stun",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Stun.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Fort",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Fort.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Magnet",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Magnet.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Pusher",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Pusher.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Anchor",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Anchor.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Space",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Space.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Boomerang",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Boomerang.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Speedrun",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Speedrun.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Mail",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Mail.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Golden",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Golden.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Squid",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Squid.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip MR",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.MR.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Reaper",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Reaper.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Replica",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Replica.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Defense",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Defense.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip KILLSTREAK",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Killstreak.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Reverse",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Reverse.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Shukuchi",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Shukuchi.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Duelist",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Duelist.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Woah",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Woah.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Ice",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Ice.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Adios",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Adios.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip BLOCKED",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Blocked.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Engineer",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Engineer.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Rocky",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Rocky.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Conveyor",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Conveyor.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Phantom",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Phantom.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Wormhole",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Wormhole.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip STOP",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.STOP.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Track",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Track.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Tableflip",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Tableflip.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Shield",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Shield.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip Booster",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Booster.ClickDetector)
+		  end    
+})
+
+Tab5:AddButton({
+	Name = "Equip BALLER",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Baller.ClickDetector)
+		  end    
+})
+
+
+Tab5:AddButton({
+	Name = "Equip The Flex",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Flex.ClickDetector)
+		  end    
+})
+
+Tab:AddButton({
+	Name = "Tin Hub [SUPER OP]",
+	Callback = function()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/cheesynob39/R20-EXPLOITER/main/Slap_Battles.lua")))()
+		  end
+})
+
+Tab:AddButton({
+	Name = "Anti Ragdoll",
+	Callback = function()
+
+		loadstring(game:HttpGet('https://pastebin.com/raw/Hc7J1RbR'))()
+		  end
+})
+
+local Section = Tab1:AddSection({
+	Name = "Misc"
+})
+
+Tab1:AddButton({
+	Name = "Kill Player",
+	Callback = function()
+
+		loadstring(game:HttpGet('https://pastebin.com/raw/z8XndCfN'))()
+		  end
+})
+
+local Section = Tab8:AddSection({
+	Name = "-----WalkSpeed Control-----"
+})
+
+Tab8:AddButton({
+	Name = "WalkSpeed ConTrol",
+	Callback = function()
+
+		loadstring(game:HttpGet("https://pastebin.com/raw/Ear4002Z"))()
+		  end
+})
+
+local Section = Tab8:AddSection({
+	Name = "---------Speed Hack---------"
+})
+
+Tab8:AddButton({
+	Name = "Speed 20",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+		  end
+})
+
+Tab8:AddButton({
+	Name = "Speed 21",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 21
+		  end
+})
+
+Tab8:AddButton({
+	Name = "Speed 22",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 22
+		  end
+})
+
+Tab8:AddButton({
+	Name = "Speed 23",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+		  end
+})
+
+Tab8:AddButton({
+	Name = "Speed 24",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 24
+		  end
+})
+
+Tab8:AddButton({
+	Name = "Speed 25",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
+		  end
+})
+
+Tab8:AddButton({
+	Name = "Speed 30",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
+		  end
+})
+
+Tab8:AddButton({
+	Name = "Speed 35",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 35
+		  end
+})
+
+Tab8:AddButton({
+	Name = "Speed 40",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
+		  end
+})
+
+Tab1:AddButton({
+	Name = "Hitbox 2",
+	Callback = function()
+
+		loadstring(game:HttpGet("https://pastebin.com/raw/VGMsvDwc"))()
+		  end
+})
+
+Tab1:AddButton({
+	Name = "Hitbox 8",
+	Callback = function()
+
+		loadstring(game:HttpGet("https://pastebin.com/raw/PP2ZBHFX"))()
+		  end
+})
+
+Tab1:AddButton({
+	Name = "Hitbox 12",
+	Callback = function()
+
+		loadstring(game:HttpGet("https://pastebin.com/raw/tKP9wXPX"))()
+		  end
+})
+
+local Section = Tab9:AddSection({
+	Name = "Ability Spawn [ Count ]"
+})
+
+Tab9:AddButton({
+	Name = "Brick Spawn (Not for Trap Farming)",
+	Callback = function()
+
+		game.ReplicatedStorage.lbrick:FireServer()
+		  end
+})
+
+local Section = Tab9:AddSection({
+	Name = "Invisible Ability"
+})
+
+Tab9:AddButton({
+	Name = "Ghost Invisible",
+	Callback = function()
+
+		game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
+		  end
+})
+
+Tab9:AddButton({
+	Name = "Ghost Visible",
+	Callback = function()
+
+		game.ReplicatedStorage.Ghostinvisibilitydeactivated:FireServer()
+		  end
+})
+
+local Section = Tab9:AddSection({
+	Name = "Ability Spawn"
+})
+
+Tab9:AddButton({
+	Name = "Pusher Wall",
+	Callback = function()
+
+		game.ReplicatedStorage.PusherWall:FireServer()
+		  end
+})
+
+Tab9:AddButton({
+	Name = "Fort Spawn",
+	Callback = function()
+
+		game.ReplicatedStorage.Fortlol:FireServer()
+		  end
+})
+
+local Section = Tab9:AddSection({
+	Name = "Ability Spawn [ Fun ]"
+})
+
+Tab9:AddButton({
+	Name = "Reverse Ability",
+	Callback = function()
+
+		game.ReplicatedStorage.ReverseAbility:FireServer()
+		  end
+})
+
+Tab9:AddButton({
+	Name = "Spawn Duelist",
+	Callback = function()
+
+		game.ReplicatedStorage.DuelistAbility:FireServer()
+		  end
+})
+
+Tab9:AddButton({
+	Name = "Rocky Shoot",
+	Callback = function()
+
+		game.ReplicatedStorage.RockyShoot:FireServer()
+		  end
+})
+
+Tab9:AddButton({
+	Name = "Spawn Mitten",
+	Callback = function()
+
+		game.ReplicatedStorage.MittenA:FireServer()
+		  end
+})
+
+Tab9:AddButton({
+	Name = "Throw Bomb",
+	Callback = function()
+
+		game.ReplicatedStorage.BombThrow:FireServer()
+		  end
+})
+
+Tab9:AddButton({
+	Name = "Bubble Throw",
+	Callback = function()
+
+		game.ReplicatedStorage.BubbleThrow:FireServer()
+		  end
+})
+
+Tab9:AddButton({
+	Name = "Spawn Shards",
+	Callback = function()
+
+		game.ReplicatedStorage.Shards:FireServer()
+		  end
+})
+
+local Section = Tab9:AddSection({
+	Name = "Ability Spawn [ General ]"
+})
+
+Tab9:AddButton({
+	Name = "Shield Ability",
+	Callback = function()
+
+		game.ReplicatedStorage.GeneralAbility:FireServer()
+		  end
+})
+
+Tab9:AddButton({
+	Name = "Spawn Baller",
+	Callback = function()
+
+		game.ReplicatedStorage.GeneralAbility:FireServer()
+		  end
+})
+
+Tab:AddButton({
+	Name = "Slap No CoolDown",
+	Callback = function()
+
+		local Cooldown; Cooldown = hookfunction(wait, function(v)
+			    v = 0;
+			    return Cooldown(v);
+		end);
+		  end
+})
+
+Tab6:AddButton({
+	Name = "Anti AFK [WORKING]",
+	Callback = function()
+
+		loadstring(game:HttpGet("https://pastebin.com/raw/EgRYtk4F"))()
+		  end
+})
+
+local Section = Tab1:AddSection({
+	Name = "Other Stuff"
+})
+
+Tab1:AddButton({
+	Name = "ServerHop",
+	Callback = function()
+
+		loadstring(game:HttpGet("https://pastebin.com/raw/eTt96NB5"))()
+		  end
+})
+
+local Section = Tab6:AddSection({
+	Name = "------NEW!!------"
+})
+
+Tab6:AddButton({
+	Name = "Trap Auto Farm [NEW]",
+	Callback = function()
+
+		-- script by 40he on yt
+		-- watch yt tutorial before farming
+
+		HRP = game.Players.LocalPlayer.Character.HumanoidRootPart
+		-- set shared.hi to false and reset to stop farming
+		shared.hi = true
+
+		while shared.hi and wait() do
+			    game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game)
+		end
+		  end
+})
+
+local Section = Tab:AddSection({
+	Name = "Other Stuff"
+})
+
+Tab:AddButton({
+	Name = "Destroy NameTag",
+	Callback = function()
+		game.Players.LocalPlayer.Character.Head["Nametag"]:Destroy()
+		  end
+})
+
+Tab:AddButton({
+	Name = "Destroy Cube Of Death",
+	Callback = function()workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"]:Destroy()
+		  end
+})
+
+Tab6:AddButton({
+	Name = "Baller Auto Farm",
+	Callback = function()
+
+		local baller = true
+		--game:GetService("Workspace").Ã…BallerlIIllIIIllllIIIllIIl["Right Leg"]
+		local baseplate = Instance.new("Part")
+		baseplate.Parent = workspace
+		baseplate.Size = Vector3.new(300,5,300) 
+		baseplate.Anchored = true
+		baseplate.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,100000,0)  
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = baseplate.CFrame + Vector3.new(0,10,0)
+		task.spawn(function()
+			while task.wait() and baller == true do 
+				    if  workspace:FindFirstChild("\195\133Baller"..game.Players.LocalPlayer.Name) then
+					local args = {
+						    [1] = workspace:FindFirstChild("\195\133Baller"..game.Players.LocalPlayer.Name):FindFirstChild("Right Arm")
+					}
+
+					game:GetService("ReplicatedStorage").GeneralHit:FireServer(unpack(args))
+					    end
+				    end
+			    end)
+		    while task.wait(35) and baller == true do
+			        game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+
+			        end
+		  end
+})
+
+local Section = Tab10:AddSection({
+	Name = "-----Equip Badge Gloves [ NEW ]-----"
+})
+
+Tab10:AddButton({
+	Name = "Equip Acrobat",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Acrobat.ClickDetector)
+		  end    
+})
+
+Tab10:AddButton({
+	Name = "Equip Plague",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Plague.ClickDetector)
+		  end    
+})
+
+Tab10:AddButton({
+	Name = "Equip Mitten",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Mitten.ClickDetector)
+		  end    
+})
+
+Tab10:AddButton({
+	Name = "Equip Phase",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Phase.ClickDetector)
+		  end    
+})
+
+Tab10:AddButton({
+	Name = "Equip Warp",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Warp.ClickDetector)
+		  end    
+})
+
+Tab10:AddButton({
+	Name = "Equip Bomb",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Bomb.ClickDetector)
+		  end    
+})
+
+Tab10:AddButton({
+	Name = "Equip Bubble",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Bubble.ClickDetector)
+		  end    
+})
+
+Tab10:AddButton({
+	Name = "Equip Jet",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Jet.ClickDetector)
+		  end    
+})
+
+Tab10:AddButton({
+	Name = "Equip Shard",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Shard.ClickDetector)
+		  end    
+})
+
+Tab10:AddButton({
+	Name = "Coming Soon",
+	Callback = function()
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+		  end
+})
+
+local Section = Tab10:AddSection({
+	Name = "----------[ NEW!!!!!! ]----------"
+})
+
+Tab10:AddButton({
+	Name = "Equip 🔥Flamarang🔥",
+	Callback = function()
+		      fireclickdetector(game:GetService("Workspace").Lobby.Flamarang.ClickDetector)
+		  end    
+})
+
+local Section = Tab11:AddSection({
+	Name = "-----Portals Teleport [ NEW ]-----"
+})
+
+Tab11:AddButton({
+	Name = "Teleport to Normal Arena",
+	Callback = function()
+		      
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby.Teleport1.CFrame
+		  end
+})
+
+Tab11:AddButton({
+	Name = " Teleport to Default Only Arena",
+	Callback = function()
+		      
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby.Teleport2.CFrame
+		  end
+})
+
+local Section = Tab11:AddSection({
+	Name = "-----Portal Teleport [New Server]-----"
+})
+
+Tab11:AddButton({
+	Name = "No One Shot Gloves | Regular Slap Battles",
+	Callback = function()
+		      
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby.Teleport3.CFrame
+		  end
+})
+
+Tab11:AddButton({
+	Name = "Slap Royale GameMode",
+	Callback = function()
+		      
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby.Teleport4.CFrame
+		  end
+})
+
+Tab11:AddButton({
+	Name = "Killstreak Only GameMode",
+	Callback = function()
+		      
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Lobby.Teleport6.CFrame
+		  end
+})
+
+Tab:AddButton({
+	Name = "Rejoin Server",
+	Callback = function()
+		      loadstring(game:HttpGet(('https://pastebin.com/raw/X2gaMq46'),true))()
+		  end    
+})
+
