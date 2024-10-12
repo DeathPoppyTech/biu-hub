@@ -19,7 +19,7 @@ OrionLib:MakeNotification({
 	Time = 5
 }) --Notification
 
-getgenv().Key = "biugui_key40021994fbi22002884" --Put The Correct Key Here
+getgenv().Key = "BiUGUI_00261004fbl9902390xcub" --Put The Correct Key Here
 getgenv().KeyInput = "string" --Require For The Key To Work
 
 local Tab = Window:MakeTab({
